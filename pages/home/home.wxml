@@ -1,2 +1,10 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper wx:if="{{banner}}" class="banner" autoplay circular interval="2500" indicator-dots indicator-active-color="#ff5a5f">
+    <block wx:for="{{banner.items}}" wx:key="index">
+      <swiper-item>
+        <image class="banner" src="{{item.coverImg}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
