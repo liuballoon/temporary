@@ -8,7 +8,7 @@ class Http {
 
   static async request({ url, data, method = 'GET' }) {
     const res = await makePromise(wx.request)({
-      url: `${config.baseApi}${url}`,
+      url: config.baseApi + url,
       data,
       method
     })
