@@ -1,4 +1,4 @@
-import { config } from "../core/config"
+import { API } from "../core/api"
 import { makePromise } from "./make-promise"
 
 /**
@@ -8,7 +8,7 @@ class Http {
 
   static async request({ url, data, method = 'GET' }) {
     const res = await makePromise(wx.request)({
-      url: config.baseApi + url,
+      url: API.baseApi + url,
       data,
       method
     })
