@@ -1,2 +1,9 @@
-<!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class="container">
+  <l-segment active-key="{{activeKey}}" scrollable placement="left" active-color="#ff5a5f" height="{{segmentHeight}}" item-height="{{50}}">
+    <block wx:for="{{rootCategories}}" wx:key="index">
+      <l-segment-item tab="{{item.name}}" key="{{index}}" />
+      <l-segment-item tab="{{item.name}}" key="{{index + 10}}" />
+      <l-segment-item tab="{{item.name}}" key="{{index + 20}}" />
+    </block>
+  </l-segment>
+</view>
