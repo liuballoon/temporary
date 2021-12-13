@@ -11,5 +11,8 @@
     "url": "https://github.com/liuballoon/temporary.git"
   },
   "author": "liuballoon",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lin-ui": "^0.9.5"
+  }
 }
