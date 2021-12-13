@@ -1,9 +1,11 @@
 import { Banner } from "../../models/banner"
+import { Navigation } from "../../models/navigation"
 
 Page({
 
   data: {
-    banner: null
+    banner: null,
+    navigations: []
   },
 
   onLoad: function (options) {
@@ -12,8 +14,10 @@ Page({
 
   async initData() {
     const banner = await Banner.getHomeTopBanner()
+    const navigations = await Navigation.getAllNavigations()
     this.setData({
-      banner
+      banner,
+      navigations,
     })
   },
 
