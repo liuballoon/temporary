@@ -1,9 +1,13 @@
 <view class="container">
-  <l-segment active-key="{{activeKey}}" scrollable placement="left" active-color="#ff5a5f" height="{{segmentHeight}}" item-height="{{50}}">
+  <l-segment bind:linchange="onChangeSegment" active-key="{{activeKey}}" placement="left" active-color="#ff5a5f" height="{{windowHeight}}" width="180" item-height="90" scrollable even="{{false}}" l-active-class="active" l-inactive-class="inactive">
     <block wx:for="{{rootCategories}}" wx:key="index">
-      <l-segment-item tab="{{item.name}}" key="{{index}}" />
-      <l-segment-item tab="{{item.name}}" key="{{index + 10}}" />
-      <l-segment-item tab="{{item.name}}" key="{{index + 20}}" />
+      <l-segment-item tab="{{item.name}}" key="{{item.id}}" />
     </block>
   </l-segment>
+
+  <scroll-view scroll-y enable-flex class="content" style="height:{{windowHeight}}rpx;">
+    <block wx:for="{{subCategories}}" wx:key="index">
+      <v-category-item class="category-item" />
+    </block>
+  </scroll-view>
 </view>

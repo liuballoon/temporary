@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "v-category-item": "/components/category-item/index"
+  }
 }

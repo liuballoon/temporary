@@ -19,6 +19,10 @@ class Category {
       }
     })
   }
+
+  static getActiveKey(rootCategories) {
+    return 3;
+  }
 }
 
 export {

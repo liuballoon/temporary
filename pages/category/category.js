@@ -1,11 +1,13 @@
 import { Category } from "../../models/category"
+import { getWindowInfo } from "../../utils/system"
 
 Page({
 
   data: {
     rootCategories: [],
-    activeKey: 0,
-    segmentHeight: 0
+    subCategories: [],
+    activeKey: '',
+    windowHeight: 0
   },
 
   onLoad: function (options) {
@@ -13,26 +15,26 @@ Page({
     this.initData()
   },
 
-  /**
-   * 初始化窗口数据
-   */
   initWindow() {
-    const window = wx.getWindowInfo()
-    console.log('window', window)
+    const window = getWindowInfo()
     this.setData({
-      segmentHeight: window.windowHeight * window.pixelRatio
+      windowHeight: window.windowHeight - 1
     })
-    console.log('height', this.data.segmentHeight)
   },
 
   async initData() {
     const rootCategories = await Category.getRootCategories()
-    // const subCategories = await Category.getSubCategoriesByRootId()
     const activeKey = Category.getActiveKey(rootCategories)
+    const subCategories = await Category.getSubCategoriesByRootId(activeKey)
     this.setData({
       rootCategories,
+      subCategories,
       activeKey
     })
+  },
+
+  onChangeSegment(event) {
+    const rootId = event.detail.activeKey
   },
 
   onShareAppMessage: function () {
