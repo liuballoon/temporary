@@ -1,0 +1,24 @@
+<view class="container">
+  <!-- 商品展示 -->
+  <swiper class="display" autoplay circular interval="2500" indicator-dots indicator-active-color="#ff5a5f">
+    <block wx:for="{{spu.displayImages}}" wx:key="index">
+      <swiper-item>
+        <image class="display" src="{{item}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="content">
+    <text class="title">{{spu.title}}</text>
+    <text class="description">{{spu.description}}</text>
+    <v-price value="{{spu.price}}" />
+  </view>
+
+  <!-- 商品介绍 -->
+  <view class="introduce-container">
+    <text>商品介绍</text>
+    <block wx:for="{{spu.introduceImages}}">
+      <image class="introduce-img" mode="widthFix" src="{{item}}" />
+    </block>
+  </view>
+</view>

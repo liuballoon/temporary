@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.display {
+  width: 100%;
+  height: 800rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+
+.title {
+  margin-bottom: 8rpx;
+}
+
+.description {
+  font-size: 28rpx;
+  color: #adadad;
+  margin-bottom: 8rpx;
+}
+
+.introduce-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.introduce-img {
+  display: flex;
+  width: 100%;
+}
