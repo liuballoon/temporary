@@ -7,4 +7,9 @@
       </swiper-item>
     </block>
   </swiper>
+
+  <!-- 商品瀑布流 -->
+  <view class="spu-container">
+    <l-water-flow generic:l-water-flow-item="v-spu-preview" />
+  </view>
 </view>

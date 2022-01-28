@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0rpx 3rpx 8rpx;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  color: #ffffff;
+  border-radius: 50rpx;
+}
+
+.cart {
+  background-color: #fcaa13;
+}
+
+.buy {
+  background-color: #ff5a5f;
+}

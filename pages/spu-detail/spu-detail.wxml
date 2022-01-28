@@ -22,3 +22,4 @@
     </block>
   </view>
 </view>
+<v-spu-tabbar class="tabbar" />

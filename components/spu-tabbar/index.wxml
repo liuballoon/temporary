@@ -1,0 +1,4 @@
+<view class="container">
+  <view class="button cart">加入购物车</view>
+  <view class="button buy">立即购买</view>
+</view>

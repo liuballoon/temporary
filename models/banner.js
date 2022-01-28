@@ -5,11 +5,11 @@ import { Http } from "../utils/http"
  */
 class Banner {
 
-  static homeTop = 'home-top'
+  static home = 'home'
 
   static getHomeTopBanner() {
     return Http.request({
-      url: `/banner/name/${Banner.homeTop}`
+      url: `/banner/name/${Banner.home}`
     })
   }
 }
