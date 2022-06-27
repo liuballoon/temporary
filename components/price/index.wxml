@@ -1,3 +1,6 @@
 <view class="container">
-  <l-price color="#ff3306" value-size="{{valueSize}}" value-bold="700" autofix value="{{value}}" />
+  <text class="half">￥</text>
+  <text>{{ amount }}</text>
+  <text wx:if="{{ decimal }}">.</text>
+  <text class="half">{{ decimal }}</text>
 </view>
