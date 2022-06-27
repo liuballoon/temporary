@@ -26,3 +26,7 @@
 .category-item {
   margin-top: 25rpx;
 }
+
+.null {
+  justify-content: center;
+}

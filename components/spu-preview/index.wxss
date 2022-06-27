@@ -42,6 +42,7 @@
 
 .tag {
   margin-right: 10rpx;
+  padding: 0 8rpx;
   font-size: 24rpx !important;
   background: linear-gradient(to bottom right, #ff5a5f, #f1a20e);
   border-radius: 4rpx !important;

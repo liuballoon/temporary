@@ -1,7 +1,7 @@
 import { Http } from "../utils/http"
 
 /**
- * 类目业务类
+ * 类目
  */
 class Category {
 
@@ -20,7 +20,8 @@ class Category {
     })
   }
 
-  static getActiveKey(rootCategories) {
+  static getDisplayRootId(rootCategories) {
+    // TODO: 从顶级类目中，找出默认展示类目的Id并返回
     return 3;
   }
 }

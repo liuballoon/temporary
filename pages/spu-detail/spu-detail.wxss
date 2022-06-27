@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   margin-bottom: 100rpx;
+  color: #333333;
 }
 
 .display {
@@ -22,7 +23,7 @@
   border-bottom-right-radius: 20rpx;
 }
 
-.title {
+.spu-title {
   margin-bottom: 8rpx;
 }
 
@@ -32,10 +33,40 @@
   margin-bottom: 8rpx;
 }
 
-.introduce-container {
+.title {
+  padding: 15rpx 25rpx;
+  font-size: 28rpx;
+  font-weight: 700;
+  letter-spacing: 1rpx;
+}
+
+.param {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
+  border-radius: 20rpx;
+  width: 100%;
+  height: 300rpx;
+  margin-bottom: 20rpx;
+}
+
+.evaluation {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  width: 100%;
+  height: 300rpx;
+  margin-bottom: 20rpx;
+}
+
+.introduce {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 100%;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
 }
 
 .introduce-img {

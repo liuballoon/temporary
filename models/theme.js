@@ -1,7 +1,7 @@
 import { Http } from "../utils/http"
 
 /**
- * 专题业务类
+ * 专题
  */
 class Theme {
 

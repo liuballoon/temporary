@@ -1,13 +1,15 @@
 import { Banner } from "../../models/banner"
 import { Navigation } from "../../models/navigation"
 import { Spu } from "../../models/spu"
+import { getWindowInfo } from "../../utils/system"
 
 Page({
 
   data: {
     banner: null,
     navigations: [],
-    spus: null
+    spus: null,
+    statusHeight: ''
   },
 
   onLoad: function (options) {
@@ -18,10 +20,13 @@ Page({
     const banner = await Banner.getHomeTopBanner()
     const navigations = await Navigation.getAllNavigations()
     const spus = await Spu.getSpu()
+    const statusHeight = getWindowInfo().statusHeight
+    console.log(statusHeight)
     this.setData({
       banner,
       navigations,
-      spus
+      spus,
+      statusHeight
     })
     wx.lin.renderWaterFlow(this.data.spus.items)  // 渲染商品瀑布流
   },

@@ -18,6 +18,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    onGotoCart(event) {
+      wx.switchTab({
+        url: '/pages/cart/cart'
+      })
+    }
   }
 })

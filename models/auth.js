@@ -1,7 +1,7 @@
 import { Http } from "../utils/http"
 
 /**
- * 权限业务类
+ * 权限
  */
 class Auth {
 

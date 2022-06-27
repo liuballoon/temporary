@@ -1,18 +1,18 @@
 <wxs src="../../wxs/common.wxs" module="comm" />
 
-<view class="container" data-id="{{data.id}}" bind:tap="onTapSpu">
-  <image class="cover-img" mode="widthFix" src="{{data.coverImg}}" />
+<view class="container" data-id="{{ data.id }}" bind:tap="onTapSpu">
+  <image class="cover-img" mode="widthFix" src="{{ data.coverImg }}" />
   <view class="content">
-    <text class="title">{{data.title}}</text>
-    <text wx:if="{{data.description}}" class="description">{{data.description}}</text>
-    <view wx:if="{{tags}}" class="tag-container">
-      <block wx:for="{{tags}}" wx:key="index">
-        <l-tag l-class="tag" size="mini" type="reading">{{item}}</l-tag>
+    <text class="title">{{ data.title }}</text>
+    <text wx:if="{{ data.description }}" class="description">{{ data.description }}</text>
+    <view wx:if="{{ tags }}" class="tag-container">
+      <block wx:for="{{ tags }}" wx:key="index">
+        <l-tag l-class="tag" type="reading" size="super-mini">{{ item }}</l-tag>
       </block>
     </view>
     <view class="price-container">
-      <v-price value="{{comm.price(data.price, data.discountPrice)}}" />
-      <l-tag wx:if="{{data.discountPrice}}" l-class="discount-tag" type="reading" size="super-mini">折扣价</l-tag>
+      <cus-price value="{{ comm.price(data.price, data.discountPrice) }}" />
+      <l-tag wx:if="{{ data.discountPrice }}" l-class="discount-tag" type="reading" size="super-mini">折扣价</l-tag>
     </view>
   </view>
 </view>

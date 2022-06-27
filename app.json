@@ -44,14 +44,9 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "l-segment": "/miniprogram_npm/lin-ui/segment/index",
-    "l-segment-item": "/miniprogram_npm/lin-ui/segment-item/index",
-    "l-grid": "/miniprogram_npm/lin-ui/grid/index",
-    "l-grid-item": "/miniprogram_npm/lin-ui/grid-item/index",
-    "l-water-flow": "/miniprogram_npm/lin-ui/water-flow/index",
-    "l-tag": "/miniprogram_npm/lin-ui/tag/index",
+    "cus-price": "/components/price/index",
+    "cus-spu-preview": "/components/spu-preview/index",
     "l-icon": "/miniprogram_npm/lin-ui/icon/index",
-    "v-price": "/components/price/index",
-    "v-spu-preview": "/components/spu-preview/index"
+    "l-tag": "/miniprogram_npm/lin-ui/tag/index"
   }
 }

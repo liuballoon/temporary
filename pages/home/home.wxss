@@ -3,11 +3,23 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  position: relative;
+}
+
+.search {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: chartreuse;
 }
 
 .banner {
   width: 100%;
   height: 300rpx;
+}
+
+.navigation {
+  width: 100%;
 }
 
 .spu-container {

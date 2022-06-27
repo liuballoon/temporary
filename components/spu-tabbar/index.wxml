@@ -1,4 +1,10 @@
 <view class="container">
+  <view>
+    <text>首页</text>
+  </view>
+  <view bind:tap="onGotoCart">
+    <text>购物车</text>
+  </view>
   <view class="button cart">加入购物车</view>
   <view class="button buy">立即购买</view>
 </view>

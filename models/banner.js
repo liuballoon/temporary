@@ -1,15 +1,18 @@
 import { Http } from "../utils/http"
 
 /**
- * 轮播图业务类
+ * 轮播图
  */
 class Banner {
 
-  static home = 'home'
+  static param = 'home'
 
+  /**
+   * 获取首页顶部轮播图
+   */
   static getHomeTopBanner() {
     return Http.request({
-      url: `/banner/name/${Banner.home}`
+      url: `/banner/name/${Banner.param}`
     })
   }
 }

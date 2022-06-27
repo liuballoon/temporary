@@ -1,3 +1,9 @@
+/**
+ * 如果存在折扣价，则返回折扣价
+ * 
+ * @param price 价格
+ * @param discountPrice 折扣价
+ */
 var price = function (price, discountPrice) {
   if (discountPrice) {
     return discountPrice

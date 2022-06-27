@@ -1,15 +1,25 @@
 <view class="container">
+  <view class="search" style="height: {{ statusHeight }}rpx;">
+    <l-search-bar />
+  </view>
+
   <!-- 轮播图 -->
-  <swiper wx:if="{{banner}}" class="banner" autoplay circular interval="2500" indicator-dots indicator-active-color="#ff5a5f">
-    <block wx:for="{{banner.items}}" wx:key="index">
+  <swiper wx:if="{{ banner }}" class="banner" autoplay circular interval="2500" 
+    indicator-dots indicator-active-color="#ff5a5f" style="margin-top: {{ statusHeight }}rpx;">
+    <block wx:for="{{ banner.items }}" wx:key="index">
       <swiper-item>
-        <image class="banner" src="{{item.coverImg}}" />
+        <image class="banner" src="{{ item.coverImg }}" />
       </swiper-item>
     </block>
   </swiper>
 
+  <!-- 导航栏 -->
+  <view class="navigation">
+    <cus-navigation value="{{ navigations }}" />
+  </view>
+
   <!-- 商品瀑布流 -->
   <view class="spu-container">
-    <l-water-flow generic:l-water-flow-item="v-spu-preview" />
+    <l-water-flow generic:l-water-flow-item="cus-spu-preview" />
   </view>
 </view>

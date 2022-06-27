@@ -7,7 +7,6 @@ Component({
 
   observers: {
     'data': function (data) {
-      // console.log(data)
       if (!data) {
         return
       }

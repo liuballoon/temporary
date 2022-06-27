@@ -6,7 +6,7 @@ Page({
   data: {
     rootCategories: [],
     subCategories: [],
-    activeKey: '',
+    rootId: '',
     windowHeight: 0
   },
 
@@ -24,17 +24,22 @@ Page({
 
   async initData() {
     const rootCategories = await Category.getRootCategories()
-    const activeKey = Category.getActiveKey(rootCategories)
-    const subCategories = await Category.getSubCategoriesByRootId(activeKey)
+    const rootId = Category.getDisplayRootId(rootCategories)
+    console.log(rootId)
+    const subCategories = await Category.getSubCategoriesByRootId(rootId)
     this.setData({
       rootCategories,
       subCategories,
-      activeKey
+      rootId
     })
   },
 
-  onChangeSegment(event) {
+  async onChangeSegment(event) {
     const rootId = event.detail.activeKey
+    const subCategories = await Category.getSubCategoriesByRootId(rootId)
+    this.setData({
+      subCategories
+    })
   },
 
   onShareAppMessage: function () {

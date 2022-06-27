@@ -1,7 +1,7 @@
 import { Http } from "../utils/http"
 
 /**
- * 导航业务类
+ * 导航
  */
 class Navigation {
 

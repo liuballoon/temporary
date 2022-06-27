@@ -1,7 +1,7 @@
 import { Http } from "../utils/http"
 
 /**
- * 商品业务类
+ * 商品
  */
 class Spu {
 

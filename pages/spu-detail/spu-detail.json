@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "v-spu-tabbar": "/components/spu-tabbar/index"
+    "cus-spu-tabbar": "/components/spu-tabbar/index"
   }
 }
